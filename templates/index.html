@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>YouTube Downloader</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+
+            <h1>▶ YouTube Downloader</h1>
+
+            <p class="subtitulo">
+                Baixe vídeos e áudios de forma simples
+            </p>
+
+            <label>
+                URL DO YOUTUBE
+            </label>
+
+            <input
+                id="url"
+                type="text"
+                placeholder="Cole aqui a URL do YouTube..."
+            >
+
+            <label>
+                FORMATO
+            </label>
+
+            <select id="formato">
+
+                <option value="MP4">
+                    🎬 MP4 - Vídeo
+                </option>
+
+                <option value="MP3">
+                    🎵 MP3 - Áudio
+                </option>
+
+            </select>
+
+            <label>
+                QUALIDADE
+            </label>
+
+            <select id="qualidade">
+
+                <option>
+                    Melhor disponível
+                </option>
+
+                <option>
+                    1080p
+                </option>
+
+                <option>
+                    720p
+                </option>
+
+                <option>
+                    480p
+                </option>
+
+                <option>
+                    360p
+                </option>
+
+                <option>
+                    320 kbps
+                </option>
+
+                <option>
+                    192 kbps
+                </option>
+
+                <option>
+                    128 kbps
+                </option>
+
+            </select>
+
+            <button
+                id="botao-download"
+                onclick="iniciarDownload()"
+            >
+                ⬇ BAIXAR
+            </button>
+
+            <div class="progresso">
+
+                <div class="barra">
+
+                    <div class="barra-interna"></div>
+
+                </div>
+
+                <div
+                    id="status"
+                    class="status"
+                >
+                    Aguardando download...
+                </div>
+
+            </div>
+
+            <div
+                id="sucesso"
+                class="sucesso"
+            >
+
+                <h2>
+                    ✓ DOWNLOAD CONCLUÍDO!
+                </h2>
+
+                <p>
+                    Seu arquivo foi salvo com sucesso!
+                </p>
+
+                <p id="arquivo"></p>
+               <a
+                   id="botao-arquivo"
+                   class="botao-arquivo"
+                     href="#"
+                   style="display: none;"
+           >
+    ⬇ BAIXAR ARQUIVO
+</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script
+        src="{{ url_for('static', filename='script.js') }}"
+    ></script>
+
+</body>
+
+</html>

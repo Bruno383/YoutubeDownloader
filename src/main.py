@@ -1,0 +1,7 @@
+print("================================")
+print("      YOUTUBE DOWNLOADER")
+print("================================")
+print()
+print("Sistema iniciado com sucesso!")
+print()
+print("Python está funcionando corretamente.")
