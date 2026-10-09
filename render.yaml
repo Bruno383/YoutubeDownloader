@@ -1,6 +1,5 @@
 services:
-
-* type: web
-  name: youtube-downloader-bruno383
-  runtime: docker
-  plan: free
+  - type: web
+    name: youtube-downloader-bruno383
+    runtime: docker
+    plan: free
